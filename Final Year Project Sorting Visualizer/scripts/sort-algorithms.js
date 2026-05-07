@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; 
 class sortAlgorithms {
     constructor(time) {
         this.list = document.querySelectorAll(".cell");
