@@ -43,7 +43,7 @@ class sortAlgorithms {
         }
     }
 
-    // SELECTION SORT
+    // SELECTION SORT 
     SelectionSort = async () => {
         for(let i = 0 ; i < this.size ; ++i) {
             let minIndex = i;
