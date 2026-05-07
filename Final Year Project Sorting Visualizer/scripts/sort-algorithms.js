@@ -7,7 +7,7 @@ class sortAlgorithms {
         this.help = new Helper(this.time, this.list);
     }
 
-    // BUBBLE SORT
+    // BUBBLE SORT 
     BubbleSort = async () => {
         for(let i = 0 ; i < this.size - 1 ; ++i) {
             for(let j = 0 ; j < this.size - i - 1 ; ++j) {
