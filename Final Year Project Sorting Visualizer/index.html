@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icons (hamburger menu icon) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Roboto font — weights 300 and 400 only (keeping bundle small) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
@@ -13,16 +16,23 @@
   <link rel="stylesheet" href="./css/style.css" />
   <title>Sorting visualizer</title>
 </head>
-
 <body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────────── -->
   <div class="nav-container">
-    <h2 class="title" onclick="window.location.reload()">
-      Sorting visualizer
-    </h2>
+
+    <!-- Title doubles as a page reload / reset button -->
+    <h2 class="title" onclick="window.location.reload()">Sorting visualizer</h2>
+
+    <!-- .navbar gets class "responsive" added on mobile (hamburger toggle) -->
     <div class="navbar" id="navbar">
+
+      <!-- Regenerates a new random array without changing algo/size/speed -->
       <a id="random" onclick="RenderScreen()">Generate array</a>
+
+      <!-- Algorithm picker — value maps to if-chain in start() (1=Bubble ... 5=Quick) -->
       <span class="options">
-        <select name="select sort algorithm" id="menu" class="algo-menu">
+        <select name="select sort algorithm" class="algo-menu">
           <option value="0">Choose algorithm</option>
           <option value="1">Bubble Sort</option>
           <option value="2">Selection Sort</option>
@@ -31,8 +41,10 @@
           <option value="5">Quick Sort</option>
         </select>
       </span>
+
+      <!-- Array size picker — controls how many bars are rendered (5–100) -->
       <span class="options">
-        <select name="select array size" id="menu" class="size-menu">
+        <select name="select array size" class="size-menu">
           <option value="0">Array size</option>
           <option value="5">5</option>
           <option value="10">10</option>
@@ -48,8 +60,10 @@
           <option value="100">100</option>
         </select>
       </span>
+
+      <!-- Speed picker — value fed into Helper as divisor: delay = 400 / speed (ms) -->
       <span class="options">
-        <select name="speed of visualization" id="menu" class="speed-menu">
+        <select name="speed of visualization" class="speed-menu">
           <option value="0">Speed</option>
           <option value="0.5">0.50x</option>
           <option value="0.75">0.75x</option>
@@ -58,19 +72,25 @@
           <option value="4">4.00x</option>
         </select>
       </span>
+
+      <!-- Triggers start() → reads algo+speed → runs selected sort -->
       <a class="start">Sort</a>
+
+      <!-- Hamburger icon — toggles .responsive class on .navbar for mobile layout -->
       <a class="icon"><i class="fa fa-bars"></i></a>
     </div>
   </div>
+  <!-- ── VISUALIZER CANVAS ───────────────────────────────────────── -->
   <div class="center">
+    <!-- .array is the container where .cell bar divs are injected by RenderList() -->
     <div class="array"></div>
   </div>
-  <footer class="footer">
-    
-  </footer>
+
+  <footer class="footer"></footer>
+
+  <!-- Script load order matters: app.js uses Helper and sortAlgorithms → load last -->
   <script src="./scripts/app.js"></script>
   <script src="./scripts/helper.js"></script>
   <script src="./scripts/sort-algorithms.js"></script>
 </body>
-
 </html>
