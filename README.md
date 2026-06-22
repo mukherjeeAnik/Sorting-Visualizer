@@ -6,7 +6,7 @@ An interactive, browser-based tool for visualizing classic sorting algorithms in
  
 ## Demo 
 
-> Generate an array → pick an algorithm → hit **Sort**  
+> Generate an array → pick an algorithm → hit **Sort**   
 
 ![Sorting Visualizer Demo](./assets/demo.gif)
 
