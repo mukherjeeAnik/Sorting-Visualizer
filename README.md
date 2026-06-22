@@ -12,7 +12,7 @@ An interactive, browser-based tool for visualizing classic sorting algorithms in
 
 ---
  
-## Algorithms
+## Algorithms 
 
 | Algorithm      | Time (avg) | Time (worst) | Space  |
 |----------------|------------|--------------|--------|
