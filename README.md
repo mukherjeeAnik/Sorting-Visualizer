@@ -1,4 +1,4 @@
-# Sorting Visualizer
+# Sorting Visualizer 
 
 An interactive, browser-based tool for visualizing classic sorting algorithms in real time. Watch how Bubble Sort, Merge Sort, Quick Sort, and more work step by step — with color-coded animations and adjustable speed.
 
